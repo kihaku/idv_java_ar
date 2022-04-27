@@ -16,10 +16,6 @@ public class Solution {
         MatOfKeyPoint matOfKeyPoint = new MatOfKeyPoint();
         orb.detect(imageMatrix, matOfKeyPoint);
 
-        // Compute the descriptors with ORB
-        Mat descriptors = new Mat();
-        orb.compute(imageMatrix, matOfKeyPoint, descriptors);
-
         // Draw the key points on the image
         Mat processedMat = new Mat();
         Features2d.drawKeypoints(imageMatrix, matOfKeyPoint, processedMat, new Scalar(0, 255, 0));
