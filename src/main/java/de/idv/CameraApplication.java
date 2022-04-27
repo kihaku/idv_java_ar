@@ -20,7 +20,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * OpenFx application that grabs the image of a camera and shows inside a window.</br>
+ * OpenJFx application that grabs the image of a camera and shows inside a window.</br>
  * Transforming the grabbed image is possible with a MatrixProcessor.
  */
 public class CameraApplication extends Application {
@@ -33,7 +33,7 @@ public class CameraApplication extends Application {
     public static void main(String[] args) {
         // Initialise OpenCV
         OpenCV.loadShared();
-        // Launch the OpenFx application
+        // Launch the OpenJFx application
         launch();
     }
 
@@ -52,7 +52,7 @@ public class CameraApplication extends Application {
         this.imageView.setFitHeight(600);
         this.imageView.setPreserveRatio(true);
 
-        // Add the ImageView to the scene and the scene to the stage (OpenFx)
+        // Add the ImageView to the scene and the scene to the stage (OpenJFx)
         Group root = new Group(this.imageView);
         Scene scene = new Scene(root, 600, 400);
         stage.setTitle("IDV AR Camera");
